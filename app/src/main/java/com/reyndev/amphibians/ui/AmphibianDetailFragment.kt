@@ -23,4 +23,8 @@ class AmphibianDetailFragment : Fragment() {
 
         return binding.root
     }
+
+    companion object {
+        const val NAME_EXTRA = "name"
+    }
 }

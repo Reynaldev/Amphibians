@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
-import com.reyndev.amphibians.R
 import com.reyndev.amphibians.databinding.FragmentAmphibianListBinding
 
 class AmphibianListFragment : Fragment() {
@@ -26,7 +25,11 @@ class AmphibianListFragment : Fragment() {
         binding.recyclerView.adapter = AmphibianListAdapter(AmphibianListener { amphibian ->
             viewModel.onAmphibianClicked(amphibian)
 
-            findNavController().navigate(R.id.action_amphibianListFragment_to_amphibianDetailFragment)
+            val action = AmphibianListFragmentDirections.actionAmphibianListFragmentToAmphibianDetailFragment(
+                amphibian.name.toString()
+            )
+
+            findNavController().navigate(action)
         })
 
         return binding.root

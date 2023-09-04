@@ -7,7 +7,7 @@
     <fragment
         android:id="@+id/amphibianListFragment"
         android:name="com.reyndev.amphibians.ui.AmphibianListFragment"
-        android:label="AmphibianListFragment" >
+        android:label="@string/list_fragment_label">
         <action
             android:id="@+id/action_amphibianListFragment_to_amphibianDetailFragment"
             app:destination="@id/amphibianDetailFragment" />
@@ -15,5 +15,9 @@
     <fragment
         android:id="@+id/amphibianDetailFragment"
         android:name="com.reyndev.amphibians.ui.AmphibianDetailFragment"
-        android:label="AmphibianDetailFragment" />
+        android:label="@string/detail_fragment_label" >
+        <argument
+            android:name="name"
+            app:argType="string" />
+    </fragment>
 </navigation>

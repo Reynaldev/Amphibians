@@ -18,7 +18,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
         android:onClick="@{() -> clickListener.onClick(amphibian)}"
-        app:cardElevator="4dp"
+        app:cardElevation="4dp"
         app:cardCornerRadius="4dp" >
 
         <TextView
